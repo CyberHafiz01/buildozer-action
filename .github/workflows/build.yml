@@ -12,3 +12,8 @@ jobs:
         with:
           buildozer_version: master
           workdir: test_app
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-app-apk
+          path: test_app/bin/*.apk
